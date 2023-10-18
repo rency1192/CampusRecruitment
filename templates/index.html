@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Recruitment Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply styles to body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Style header section */
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Style main content */
+main {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Style form section */
+.form-section {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Style input fields */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style button */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Style result section */
+.result-section {
+    text-align: center;
+}
+
+.result-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Style prediction result */
+.prediction-result {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 1.2rem;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Campus Recruitment Prediction</h1>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>Enter Details</h2>
+            <form action="/predict" method="post">
+                <div class="input-container">
+                    <label for="ssc_p">SSC Percentage:</label>
+                    <input type="number" name="ssc_p" step="0.01" required>
+                </div>
+                <div class="input-container">
+                    <label for="hsc_p">HSC Percentage:</label>
+                    <input type="number" name="hsc_p" step="0.01" required>
+                </div>
+                <div class="input-container">
+                    <label for="degree_p">Degree Percentage:</label>
+                    <input type="number" name="degree_p" step="0.01" required>
+                </div>
+                <div class="input-container">
+                    <label for="workex">Work Experience:</label>
+                    <input type="number" name="workex" step="0.01" required>
+                </div>
+                <div class="input-container">
+                    <label for="mba_p">MBA Percentage:</label>
+                    <input type="number" name="mba_p" step="0.01" required>
+                </div>
+                <div class="input-container">
+                    <label for="etest_p">E-Test Percentage:</label>
+                    <input type="number" name="etest_p" step="0.01" required>
+                </div>
+                <div class="input-container">
+                   <label for="gender">Gender:</label>
+                    <input type="number" name="gender" step="0.01" required>
+                </div>
+                <div class="input-container">
+                    <label for="degree_t">Degree Type:</label>
+                    <input type="text" name="degree_t" required>
+                </div>
+                <div class="input-container">
+                    <label for="specialisation">MBA Specialization:</label>
+                    <input type="text" name="specialisation" required>
+                </div>
+                <div class="input-container">
+                    <button type="submit">Predict</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
